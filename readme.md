@@ -2,6 +2,9 @@
 
 A real-time chat application built with **React** on the frontend and **Socket.IO** on the backend, styled to resemble WhatsApp. Features include private messaging, group messaging, user list with avatars, unread message notifications, and a modern UI.
 
+## Preview
+![Chat Demo](ScreenRec_2025-03-1317-11-01-ezgif.com-video-to-gif-converter.gif)
+
 ## Features
 - **Real-Time Messaging**: Send and receive private or group messages instantly.
 - **User List**: Displays online users with profile avatars and unread message counts.
