@@ -1,0 +1,70 @@
+ /* Center the login container on the screen */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f2f5; /* WhatsApp-like background */
+  }
+  
+  /* Form styling */
+  .login-container form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 400px; /* Limit width for a card-like feel */
+    text-align: center;
+  }
+  
+  /* Header styling */
+  .login-container h2 {
+    background-color: #00a884; /* WhatsApp green */
+    color: white;
+    padding: 15px;
+    margin: -30px -30px 20px -30px; /* Extend to edges, add bottom spacing */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  /* Input styling */
+  .login-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px; /* Rounded like WhatsApp */
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .login-container input:focus {
+    border-color: #00a884; /* Green border on focus */
+  }
+  
+  /* Placeholder styling */
+  .login-container input::placeholder {
+    color: #999;
+  }
+  
+  /* Button styling */
+  .login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00a884; /* WhatsApp green */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-container button:hover {
+    background-color: #008f6d; /* Darker green on hover */
+  }
