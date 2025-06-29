@@ -1,16 +1,16 @@
 import express from 'express'
-import cors from 'cors'
+import corsConfiguration from './config/corsConfig.js';
 import { Server } from 'socket.io';
 import {createServer} from 'http';
+import requestLogger from './middlewares/requestLogger.js';
+import rateLimiter from './middlewares/rateLimiter.js';
 const app = express();
 
- 
-app.use(cors({
-  origin: 'http://localhost:5173',
-  methods:['POST', 'GET'],
-  credentials:true
+app.use(corsConfiguration());
+app.use(rateLimiter(2, 10)) // first parameter maximum rate limit, and second time in minutes
+app.use(requestLogger);
 
-}));
+
 const port = process.env.PORT || 3000;
 
 const server = createServer(app);
@@ -74,7 +74,11 @@ io.on('connection', (socket) => {
 
 
 
-
+app.get('/get-data', (req,res)=>{
+return res.json({
+  message: "data is here"
+})
+})
 
 
 
